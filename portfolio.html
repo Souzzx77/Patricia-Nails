@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="1.png" type="image/png">
+  <title>Portfólio | Patricia Nails</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: 
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)),
+        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') no-repeat center/cover;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 35px;
+    }
+
+    .logo span {
+      font-family: 'Great Vibes', cursive;
+      font-size: 30px;
+      color: #27ae60;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #27ae60;
+    }
+
+    .btn {
+      background: #27ae60;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e874b;
+    }
+
+    .container {
+      padding: 120px 8% 60px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .item:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.6));
+      color: white;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .item:hover .overlay {
+      opacity: 1;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      background: #27ae60;
+      color: white;
+    }
+
+    @media(max-width: 600px){
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="1.png" alt="Logo">
+    <span>Patricia Nails</span>
+  </div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="preços.html">Serviços</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="contato.html">Contato</a>
+    <a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços" class="btn">Agendar</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Meu Portfólio</h1>
+  <p class="subtitle">Alguns dos meus trabalhos recentes</p>
+
+  <div class="gallery">
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371" alt="">
+      <div class="overlay">Alongamento em gel</div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc" alt="">
+      <div class="overlay">Nail art delicada</div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a" alt="">
+      <div class="overlay">Esmaltação clássica</div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30" alt="">
+      <div class="overlay">Design moderno</div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f" alt="">
+      <div class="overlay">Unhas decoradas</div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1596704017254-9751b7f08f42" alt="">
+      <div class="overlay">Estilo premium</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Patricia Nails — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

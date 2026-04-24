@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="1.png" type="image/png">
+  <title>Contato | Patricia Nails</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: 
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)),
+        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') no-repeat center/cover;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 34px;
+      color: #27ae60;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #27ae60;
+    }
+
+    .btn {
+      background: #27ae60;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #1e874b;
+    }
+
+    .container {
+      padding: 60px 8%;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: #27ae60;
+      margin-bottom: 40px;
+    }
+
+    .profile {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .profile img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .bio {
+      max-width: 500px;
+    }
+
+    .bio h2 {
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    .bio p {
+      margin: 10px 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      color: #27ae60;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      margin: 10px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      background: #27ae60;
+      color: white;
+    }
+
+    @media(max-width: 900px) {
+      .profile {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Patricia Nails</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="preços.html">Serviços</a>
+    <a href="portfólio.html">Portfólio</a>
+    <a href="contato.html">Contato</a>
+    <a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços" class="btn">Agendar</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Contato</h1>
+
+  <!-- Perfil -->
+  <div class="profile">
+    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f" alt="Profissional">
+
+    <div class="bio">
+      <h2>Patrícia</h2>
+      <p>Especialista em design de unhas e cuidados femininos, com foco em elegância, durabilidade e estilo personalizado.</p>
+      <p>Com anos de experiência no atendimento individual, cada cliente recebe atenção exclusiva e um acabamento impecável.</p>
+      <p>Mais do que unhas bonitas, aqui você encontra autoestima, cuidado e um momento só seu.</p>
+    </div>
+  </div>
+
+  <!-- Contato -->
+  <div class="contact-box">
+    <h2>Fale comigo</h2>
+
+    <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
+    <p><strong>Email:</strong> contato@patricianails.com</p>
+    <p><strong>Atendimento:</strong> Segunda a Sábado, das 9h às 19h</p>
+
+    <div class="buttons">
+      <a href="#" class="btn">Chamar no WhatsApp</a>
+      <a href="#" class="btn">Enviar Email</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Patricia Nails — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

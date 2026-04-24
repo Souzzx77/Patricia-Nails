@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="1.png" type="image/png">
+  <title>Preços | Patricia Nails</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: 
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)),
+        url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') no-repeat center/cover;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 34px;
+      color: #27ae60;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #27ae60;
+    }
+
+    .btn {
+      background: #27ae60;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e874b;
+    }
+
+    .container {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      width: 260px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .card ul li {
+      margin: 8px 0;
+      color: #555;
+    }
+
+    .highlight {
+      border: 2px solid #27ae60;
+      transform: scale(1.05);
+    }
+
+    .highlight::before {
+      content: "Mais pedido";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #27ae60;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    /* Endereço */
+    .location {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .location h2 {
+      color: #27ae60;
+      margin-bottom: 15px;
+    }
+
+    .location p {
+      margin: 8px 0;
+      color: #555;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      background: #27ae60;
+      color: white;
+    }
+
+    @media(max-width: 900px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Patricia Nails</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="preços.html">Serviços</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="contato.html">Contato</a>
+    <a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços" class="btn">Agendar</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Tabela de Preços</h1>
+  <p class="subtitle">Beleza, cuidado e elegância — escolha seu estilo</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Manicure</h3>
+      <p class="price">R$ 30</p>
+      <ul>
+        <li>Cutilagem</li>
+        <li>Esmaltação</li>
+        <li>Finalização</li>
+      </ul>
+      <a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20agendar%20seus%20serviços" class="btn">Agendar</a>
+    </div>
+
+    <div class="card highlight">
+      <h3>Alongamento</h3>
+      <p class="price">R$ 120</p>
+      <ul>
+        <li>Gel ou Fibra</li>
+        <li>Acabamento premium</li>
+        <li>Alta durabilidade</li>
+      </ul>
+      <a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços%20de%20alongamento" class="btn">Agendar</a>
+    </div>
+
+    <div class="card">
+      <h3>Nail Art</h3>
+      <p class="price">R$ 50+</p>
+      <ul>
+        <li>Design personalizado</li>
+        <li>Pedrarias opcionais</li>
+        <li>Estilo exclusivo</li>
+      </ul>
+      <a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços%20de%20Nail%20Art" class="btn">Agendar</a>
+    </div>
+
+  </div>
+
+  <!-- Endereço -->
+  <div class="location">
+    <h2>Endereço</h2>
+    <p>Rua Ilha de Francês, 139</p>
+    <p>Zona Oeste - São Paulo, SP</p>
+    <p>Atendimento com hora marcada</p>
+    <br>
+    <a href="#" class="btn">Abrir no Google Maps</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Patricia Nails — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
