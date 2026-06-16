@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<link rel="icon" href="logo-removebg-preview.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>| Patricia Nails - Serviços</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root{
+
+--marsala:#7A1F3D;
+--marsala-light:#A3365A;
+
+--gold:#D4AF37;
+--gold-soft:#F3D47A;
+
+--bg:#0F0A0C;
+--card:#171114;
+
+--text:#fff;
+--muted:#bdbdbd;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+.container{
+width:min(1200px,92%);
+margin:auto;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(15,10,12,.8);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(212,175,55,.08);
+}
+
+.navbar{
+height:85px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:55px;
+}
+
+.logo-text h2{
+font-family:'Great Vibes',cursive;
+font-size:2rem;
+font-weight:400;
+}
+
+.logo-text span{
+font-size:.8rem;
+color:var(--gold-soft);
+}
+
+.nav-menu{
+display:flex;
+gap:35px;
+}
+
+.nav-menu a{
+font-weight:600;
+transition:.3s;
+}
+
+.nav-menu a:hover{
+color:var(--gold);
+}
+
+.btn-header{
+padding:14px 24px;
+border-radius:999px;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+font-weight:600;
+}
+
+.menu-toggle{
+display:none;
+font-size:1.4rem;
+cursor:pointer;
+}
+
+/* HERO */
+
+.page-hero{
+padding:180px 0 100px;
+text-align:center;
+position:relative;
+}
+
+.page-hero::before{
+content:'';
+position:absolute;
+width:600px;
+height:600px;
+background:rgba(212,175,55,.08);
+border-radius:50%;
+filter:blur(120px);
+top:-200px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.page-hero span{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(212,175,55,.08);
+border:1px solid rgba(212,175,55,.15);
+color:var(--gold-soft);
+margin-bottom:20px;
+}
+
+.page-hero h1{
+font-size:clamp(3rem,7vw,5rem);
+margin-bottom:20px;
+}
+
+.page-hero p{
+max-width:700px;
+margin:auto;
+color:var(--muted);
+line-height:1.8;
+}
+
+/* PREÇOS */
+
+.pricing{
+padding-bottom:120px;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+}
+
+.pricing-card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.08);
+border-radius:35px;
+padding:40px;
+backdrop-filter:blur(20px);
+transition:.4s;
+}
+
+.pricing-card:hover{
+transform:translateY(-10px);
+border-color:var(--gold);
+}
+
+.featured{
+border-color:rgba(212,175,55,.25);
+}
+
+.pricing-header{
+text-align:center;
+margin-bottom:35px;
+}
+
+.pricing-header i{
+font-size:3rem;
+margin-bottom:20px;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.pricing-header h2{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.pricing-header p{
+color:var(--muted);
+}
+
+.price-list{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.price-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+border-radius:18px;
+background:rgba(255,255,255,.02);
+border:1px solid rgba(255,255,255,.04);
+}
+
+.price-item span{
+color:#ddd;
+}
+
+.price-item strong{
+color:var(--gold);
+font-size:1.05rem;
+}
+
+.pricing-btn{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:30px;
+padding:18px;
+border-radius:999px;
+font-weight:700;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+}
+
+/* CTA */
+
+.cta{
+padding:0 0 120px;
+}
+
+.cta-box{
+padding:70px;
+border-radius:35px;
+text-align:center;
+background:
+linear-gradient(
+135deg,
+rgba(212,175,55,.08),
+rgba(163,54,90,.08)
+);
+border:1px solid rgba(212,175,55,.1);
+}
+
+.cta-box h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.cta-box p{
+max-width:700px;
+margin:auto;
+color:var(--muted);
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-menu{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.cta-box{
+padding:40px 25px;
+}
+
+.cta-box h2{
+font-size:2rem;
+}
+
+}
+
+footer{
+margin-top:60px;
+padding:70px 0 30px;
+background:
+radial-gradient(
+circle at top center,
+rgba(212,175,55,.12),
+transparent 35%
+),
+linear-gradient(
+180deg,
+rgba(20,10,12,.95),
+rgba(10,6,8,1)
+);
+border-top:1px solid rgba(212,175,55,.15);
+}
+
+.footer-social-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.footer-social-title h3{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.footer-social-title p{
+color:var(--muted);
+}
+
+.social-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:700px;
+margin:0 auto;
+}
+
+.social-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 28px;
+border-radius:22px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.08);
+transition:.3s;
+}
+
+.social-card:hover{
+transform:translateY(-4px);
+}
+
+.social-left{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.social-left i{
+font-size:1.6rem;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+transition:.3s;
+}
+
+.social-card a{
+padding:12px 20px;
+border-radius:999px;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+color:#fff;
+font-weight:600;
+}
+
+.social-card.whatsapp:hover{
+border-color:#25D366;
+}
+
+.social-card.whatsapp:hover i{
+-webkit-text-fill-color:#25D366;
+background:none;
+}
+
+.social-card.instagram:hover{
+border-color:#E1306C;
+}
+
+.social-card.instagram:hover i{
+-webkit-text-fill-color:#E1306C;
+background:none;
+}
+
+.social-card.location:hover{
+border-color:var(--gold);
+}
+
+.social-card.location:hover i{
+-webkit-text-fill-color:var(--gold);
+background:none;
+}
+
+.footer-bottom{
+margin-top:50px;
+padding-top:25px;
+border-top:1px solid rgba(212,175,55,.08);
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+color:var(--muted);
+}
+
+.footer-signature span a{
+background:linear-gradient(
+90deg,
+var(--gold),
+var(--gold-soft),
+var(--marsala-light)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+font-weight:700;
+}
+
+.footer-signature span a:hover{
+letter-spacing:.5px;
+}
+
+/* =====================
+RESPONSIVO FINAL
+===================== */
+
+@media(max-width:1000px){
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.social-card{
+flex-direction:column;
+gap:20px;
+text-align:center;
+}
+
+.social-left{
+flex-direction:column;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+
+<img src="logo-removebg-preview.png">
+
+<div class="logo-text">
+<span>Espaço Santana</span>
+<h2>Patricia Nails</h2>
+</div>
+
+</div>
+
+<nav class="nav-menu">
+<a href="index.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="galeria.html">Galeria</a>
+<a href="contato.html">Contato</a>
+</nav>
+
+<a href="https://wa.me/5511946250613" class="btn-header">
+Agendar
+</a>
+
+</div>
+
+</header>
+
+<section class="page-hero">
+
+<div class="container">
+
+<span>Nossos Serviços</span>
+
+<h1>Serviços & Valores</h1>
+
+<p>
+Escolha o procedimento ideal para você e agende seu atendimento.
+Qualidade, cuidado e excelência em cada detalhe.
+</p>
+
+</div>
+
+</section>
+
+<section class="pricing">
+
+<div class="container">
+
+<div class="pricing-grid">
+
+  <!-- =========================
+TRABALHO TRADICIONAL
+========================= -->
+
+<div class="pricing-card">
+
+<div class="pricing-header">
+
+<i class="fas fa-hand-sparkles"></i>
+
+<h2>Trabalho Tradicional</h2>
+
+<p>
+Serviços clássicos para manter suas unhas sempre bonitas e bem cuidadas.
+</p>
+
+</div>
+
+<div class="price-list">
+
+<div class="price-item">
+<span>Mão Simples</span>
+<strong>R$ 40,00</strong>
+</div>
+
+<div class="price-item">
+<span>Pé Simples</span>
+<strong>R$ 45,00</strong>
+</div>
+
+<div class="price-item">
+<span>Francesa ou Decorada</span>
+<strong>+ R$ 7,00</strong>
+</div>
+
+<div class="price-item">
+<span>Decorada por dedo</span>
+<strong>R$ 3,00</strong>
+</div>
+
+<div class="price-item">
+<span>Pacote Mão + Pé</span>
+<strong>R$ 80,00</strong>
+</div>
+
+<div class="price-item">
+<span>Esmaltação Mão</span>
+<strong>R$ 30,00</strong>
+</div>
+
+<div class="price-item">
+<span>Esmaltação Pé</span>
+<strong>R$ 35,00</strong>
+</div>
+
+</div>
+
+<a
+href="https://wa.me/5511946250613"
+class="pricing-btn">
+
+Agendar Atendimento
+
+</a>
+
+</div>
+
+<!-- =========================
+TRABALHO NAIL
+========================= -->
+
+<div class="pricing-card featured">
+
+<div class="pricing-header">
+
+<i class="fas fa-gem"></i>
+
+<h2>Trabalho Nail</h2>
+
+<p>
+Alongamentos, blindagens e técnicas modernas para unhas impecáveis.
+</p>
+
+</div>
+
+<div class="price-list">
+
+<div class="price-item">
+<span>Esmaltação em Gel</span>
+<strong>R$ 80,00</strong>
+</div>
+
+<div class="price-item">
+<span>Banho em Gel + Esmaltação em Gel</span>
+<strong>R$ 120,00</strong>
+</div>
+
+<div class="price-item">
+<span>Banho em Gel + Esmaltação Simples</span>
+<strong>R$ 100,00</strong>
+</div>
+
+<div class="price-item">
+<span>Colocação Método F1</span>
+<strong>R$ 160,00</strong>
+</div>
+
+<div class="price-item">
+<span>Poligel</span>
+<strong>R$ 120,00</strong>
+</div>
+
+<div class="price-item">
+<span>Manutenção</span>
+<strong>R$ 120,00</strong>
+</div>
+
+<div class="price-item">
+<span>Colocação de Tips</span>
+<strong>R$ 80,00</strong>
+</div>
+
+<div class="price-item">
+<span>Colocação de Soft Gel</span>
+<strong>R$ 80,00</strong>
+</div>
+
+<div class="price-item">
+<span>Remoção de Procedimento</span>
+<strong>R$ 30,00</strong>
+</div>
+
+<div class="price-item">
+<span>Blindagem</span>
+<strong>R$ 60,00</strong>
+</div>
+
+</div>
+
+<a
+href="https://wa.me/5511946250613"
+class="pricing-btn">
+
+Agendar Atendimento
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+CTA FINAL
+========================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+Pronta para transformar suas unhas?
+</h2>
+
+<p>
+
+Atendimento personalizado, ambiente acolhedor e
+acabamento profissional para valorizar ainda mais sua beleza.
+
+</p>
+
+<a
+href="https://wa.me/5511946250613"
+class="pricing-btn">
+
+<i class="fab fa-whatsapp"></i>
+&nbsp;
+Agendar Horário
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-social-title">
+
+<h3>Patricia Nails</h3>
+
+<p>
+Beleza, cuidado e elegância em cada detalhe.
+</p>
+
+</div>
+
+<div class="social-list">
+
+<div class="social-card whatsapp">
+
+<div class="social-left">
+
+<i class="fab fa-whatsapp"></i>
+
+<div class="social-info">
+
+<h4>WhatsApp</h4>
+
+<p>Agende seu atendimento.</p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/5511946250613?text=Olá%20Patricia%20Nails%2C%20gostaria%20de%20agendar%20um%20atendimento.">
+Conversar
+</a>
+
+</div>
+
+<div class="social-card instagram">
+
+<div class="social-left">
+
+<i class="fab fa-instagram"></i>
+
+<div class="social-info">
+
+<h4>Instagram</h4>
+
+<p>@espacosantananails</p>
+
+</div>
+
+</div>
+
+<a href="https://www.instagram.com/espacosantana_nails/">
+Acessar
+</a>
+
+</div>
+
+<div class="social-card location">
+
+<div class="social-left">
+
+<i class="fas fa-location-dot"></i>
+
+<div class="social-info">
+
+<h4>Endereço</h4>
+
+<p>Rua Saguairu, 799 - Espaço Santana</p>
+
+</div>
+
+</div>
+
+<a href="#">
+Ver Local</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Patricia Nails - Todos os direitos reservados.
+</p>
+
+<p class="footer-signature">
+
+Site desenvolvido por
+
+<span>
+<a href="https://souzzx77.github.io/Nexa-Agency-Enterprises/" target="_blank">
+Nexa Agency
+</a>
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
