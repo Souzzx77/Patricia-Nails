@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<link rel="icon" href="1.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>| Patricia Nails - Início</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root{
+
+--marsala:#7A1F3D;
+--marsala-light:#A3365A;
+
+--gold:#D4AF37;
+--gold-soft:#F3D47A;
+
+--bg:#0F0A0C;
+--card:#171114;
+
+--text:#ffffff;
+--muted:#b8b8b8;
+
+--radius:24px;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+body::-webkit-scrollbar{
+width:8px;
+}
+
+body::-webkit-scrollbar-thumb{
+background:linear-gradient(var(--gold),var(--marsala));
+border-radius:999px;
+}
+
+.container{
+width:min(1200px,92%);
+margin:auto;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* =====================
+HEADER
+===================== */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+backdrop-filter:blur(18px);
+background:rgba(15,10,12,.75);
+border-bottom:1px solid rgba(212,175,55,.08);
+}
+
+.navbar{
+height:85px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.logo img{
+width:52px;
+height:52px;
+object-fit:contain;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+}
+
+.logo-text span{
+font-size:.8rem;
+color:var(--gold-soft);
+}
+
+.logo-text h2{
+font-family:'Great Vibes',cursive;
+font-size:2rem;
+font-weight:400;
+}
+
+.nav-menu{
+display:flex;
+align-items:center;
+gap:35px;
+}
+
+.nav-menu a{
+font-size:.95rem;
+font-weight:600;
+position:relative;
+transition:.3s;
+}
+
+.nav-menu a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:var(--gold);
+transition:.3s;
+}
+
+.nav-menu a:hover::after{
+width:100%;
+}
+
+.header-buttons{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.btn-header{
+padding:14px 24px;
+border-radius:999px;
+font-weight:600;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+color:white;
+transition:.3s;
+}
+
+.btn-header:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 30px rgba(212,175,55,.25);
+}
+
+.menu-toggle{
+display:none;
+font-size:1.5rem;
+cursor:pointer;
+}
+
+/* =====================
+HERO
+===================== */
+
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+overflow:hidden;
+padding-top:90px;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+180deg,
+rgba(15,10,12,.6),
+rgba(15,10,12,.95)
+),
+url("hero.jpg");
+background-size:cover;
+background-position:center;
+z-index:-2;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+width:700px;
+height:700px;
+border-radius:50%;
+background:rgba(212,175,55,.08);
+filter:blur(120px);
+right:-250px;
+top:-100px;
+z-index:-1;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+}
+
+.hero-left{
+
+}
+
+.hero-badge{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(212,175,55,.08);
+border:1px solid rgba(212,175,55,.15);
+color:var(--gold-soft);
+margin-bottom:25px;
+}
+
+.hero-left h1{
+font-size:clamp(3rem,6vw,6rem);
+line-height:1;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.hero-left h1 span{
+background:linear-gradient(
+90deg,
+var(--gold),
+var(--gold-soft)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-left p{
+font-size:1.1rem;
+line-height:1.8;
+color:var(--muted);
+max-width:650px;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+padding:16px 28px;
+border-radius:999px;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+font-weight:700;
+display:flex;
+align-items:center;
+gap:10px;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 40px rgba(212,175,55,.2);
+}
+
+.btn-secondary{
+padding:16px 28px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.03);
+transition:.3s;
+}
+
+.btn-secondary:hover{
+border-color:var(--gold);
+}
+
+.hero-right{
+display:flex;
+justify-content:center;
+}
+
+.hero-image{
+width:450px;
+height:550px;
+border-radius:40px;
+overflow:hidden;
+position:relative;
+border:1px solid rgba(212,175,55,.15);
+background:#1c1618;
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-image::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+180deg,
+transparent,
+rgba(0,0,0,.4)
+);
+}
+
+.hero-card{
+position:absolute;
+bottom:25px;
+left:25px;
+right:25px;
+padding:20px;
+border-radius:20px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.hero-card h3{
+margin-bottom:5px;
+}
+
+.hero-card p{
+font-size:.9rem;
+color:#ddd;
+}
+
+/* =====================
+STATS
+===================== */
+
+.stats{
+padding:30px 0 90px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.stat-card{
+padding:30px;
+border-radius:24px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.08);
+text-align:center;
+transition:.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-5px);
+border-color:var(--gold);
+}
+
+.stat-card h2{
+font-size:2.5rem;
+margin-bottom:10px;
+color:var(--gold);
+}
+
+.stat-card span{
+color:var(--muted);
+}
+
+/* =====================
+RESPONSIVO
+===================== */
+
+@media(max-width:1000px){
+
+.hero-content{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-left p{
+margin:auto auto 35px;
+}
+
+.hero-image{
+width:100%;
+max-width:450px;
+height:550px;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:850px){
+
+.nav-menu{
+position:fixed;
+top:85px;
+left:-100%;
+width:100%;
+height:calc(100vh - 85px);
+background:#120d0f;
+flex-direction:column;
+justify-content:center;
+transition:.4s;
+}
+
+.nav-menu.active{
+left:0;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.header-buttons{
+display:none;
+}
+
+}
+
+/* =====================
+SECTION TITLE
+===================== */
+
+.section-title{
+text-align:center;
+max-width:800px;
+margin:0 auto 70px;
+}
+
+.section-title span{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(212,175,55,.08);
+border:1px solid rgba(212,175,55,.15);
+color:var(--gold-soft);
+margin-bottom:20px;
+}
+
+.section-title h2{
+font-size:clamp(2rem,5vw,4rem);
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.section-title p{
+color:var(--muted);
+line-height:1.8;
+}
+
+/* =====================
+SERVICES
+===================== */
+
+.services{
+padding:120px 0;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.service-card{
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.08);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+border-color:var(--gold);
+box-shadow:0 25px 60px rgba(212,175,55,.12);
+}
+
+.service-icon{
+width:80px;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:22px;
+margin-bottom:25px;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+}
+
+.service-icon i{
+font-size:1.8rem;
+}
+
+.service-card h3{
+font-size:1.4rem;
+margin-bottom:15px;
+}
+
+.service-card p{
+color:var(--muted);
+line-height:1.8;
+}
+
+/* =====================
+GALERIA
+===================== */
+
+.gallery{
+padding:120px 0;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.gallery-item{
+position:relative;
+overflow:hidden;
+border-radius:28px;
+height:350px;
+cursor:pointer;
+}
+
+.gallery-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.6s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+.gallery-overlay{
+position:absolute;
+inset:0;
+display:flex;
+align-items:flex-end;
+padding:25px;
+background:linear-gradient(
+180deg,
+transparent,
+rgba(0,0,0,.8)
+);
+opacity:0;
+transition:.4s;
+}
+
+.gallery-item:hover .gallery-overlay{
+opacity:1;
+}
+
+.gallery-overlay span{
+font-weight:700;
+}
+
+/* =====================
+CTA
+===================== */
+
+.cta{
+padding:120px 0;
+}
+
+.cta-box{
+padding:80px;
+border-radius:40px;
+text-align:center;
+background:
+linear-gradient(
+135deg,
+rgba(212,175,55,.08),
+rgba(163,54,90,.08)
+);
+border:1px solid rgba(212,175,55,.12);
+}
+
+.cta-box span{
+display:inline-block;
+margin-bottom:20px;
+color:var(--gold-soft);
+}
+
+.cta-box h2{
+font-size:clamp(2rem,5vw,4rem);
+max-width:900px;
+margin:auto;
+margin-bottom:25px;
+line-height:1.1;
+}
+
+.cta-box p{
+max-width:700px;
+margin:auto;
+color:var(--muted);
+line-height:1.8;
+margin-bottom:35px;
+}
+
+/* =====================
+RESPONSIVO
+===================== */
+
+@media(max-width:1000px){
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:700px){
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.cta-box{
+padding:40px 25px;
+}
+
+}
+
+/* =====================
+CONTACT
+===================== */
+
+.contact{
+padding:120px 0;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:450px 1fr;
+gap:40px;
+align-items:stretch;
+}
+
+.contact-info{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-card{
+display:flex;
+align-items:flex-start;
+gap:20px;
+padding:25px;
+border-radius:24px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.08);
+}
+
+.contact-card i{
+font-size:1.5rem;
+color:var(--gold);
+margin-top:5px;
+}
+
+.contact-card h3{
+margin-bottom:8px;
+}
+
+.contact-card p{
+color:var(--muted);
+line-height:1.7;
+}
+
+.contact-button{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+padding:18px;
+margin-top:10px;
+border-radius:999px;
+font-weight:700;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+}
+
+.map-box{
+overflow:hidden;
+border-radius:30px;
+border:1px solid rgba(212,175,55,.08);
+}
+
+.map-box iframe{
+width:100%;
+height:100%;
+min-height:500px;
+border:none;
+}
+
+/* =====================
+FOOTER
+===================== */
+
+footer{
+margin-top:60px;
+padding:70px 0 30px;
+background:
+radial-gradient(
+circle at top center,
+rgba(212,175,55,.12),
+transparent 35%
+),
+linear-gradient(
+180deg,
+rgba(20,10,12,.95),
+rgba(10,6,8,1)
+);
+border-top:1px solid rgba(212,175,55,.15);
+}
+
+.footer-social-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.footer-social-title h3{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.footer-social-title p{
+color:var(--muted);
+}
+
+.social-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:700px;
+margin:0 auto;
+}
+
+.social-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 28px;
+border-radius:22px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.08);
+transition:.3s;
+}
+
+.social-card:hover{
+transform:translateY(-4px);
+}
+
+.social-left{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.social-left i{
+font-size:1.6rem;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+transition:.3s;
+}
+
+.social-card a{
+padding:12px 20px;
+border-radius:999px;
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--marsala-light)
+);
+color:#fff;
+font-weight:600;
+}
+
+.social-card.whatsapp:hover{
+border-color:#25D366;
+}
+
+.social-card.whatsapp:hover i{
+-webkit-text-fill-color:#25D366;
+background:none;
+}
+
+.social-card.instagram:hover{
+border-color:#E1306C;
+}
+
+.social-card.instagram:hover i{
+-webkit-text-fill-color:#E1306C;
+background:none;
+}
+
+.social-card.location:hover{
+border-color:var(--gold);
+}
+
+.social-card.location:hover i{
+-webkit-text-fill-color:var(--gold);
+background:none;
+}
+
+.footer-bottom{
+margin-top:50px;
+padding-top:25px;
+border-top:1px solid rgba(212,175,55,.08);
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+color:var(--muted);
+}
+
+.footer-signature span a{
+background:linear-gradient(
+90deg,
+var(--gold),
+var(--gold-soft),
+var(--marsala-light)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+font-weight:700;
+}
+
+.footer-signature span a:hover{
+letter-spacing:.5px;
+}
+
+/* =====================
+RESPONSIVO FINAL
+===================== */
+
+@media(max-width:1000px){
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.social-card{
+flex-direction:column;
+gap:20px;
+text-align:center;
+}
+
+.social-left{
+flex-direction:column;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+
+<img src="logo-removebg-preview.png" alt="Patricia Nails">
+
+<div class="logo-text">
+<span>Espaço Santana</span>
+<h2>Patricia Nails</h2>
+</div>
+
+</div>
+
+<nav class="nav-menu">
+
+<a href="#">Início</a>
+<a href="#servicos">Serviços</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+
+</nav>
+
+<div class="header-buttons">
+
+<a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços" class="btn-header">
+Agendar Horário
+</a>
+
+</div>
+
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="hero-left">
+
+<div class="hero-badge">
+<i class="fas fa-crown"></i>
+Atendimento Premium
+</div>
+
+<h1>
+Suas unhas com mais
+<span>beleza, elegância</span>
+e personalidade
+</h1>
+
+<p>
+
+No Patricia Nails cada detalhe importa.
+Um atendimento acolhedor, profissional e dedicado
+para realçar sua beleza e elevar sua autoestima.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://wa.me/5511946250613?text=Olá%20Patricia,%20Gostaria%20de%20conhecer%20seus%20serviços" class="btn-primary">
+<i class="fab fa-whatsapp"></i>
+Agendar Agora
+</a>
+
+<a href="#servicos" class="btn-secondary">
+Conhecer Serviços
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-image">
+
+<img src="Patty.png" alt="Patricia Nails">
+
+<div class="hero-card">
+
+<h3>Patricia Nails</h3>
+
+<p>
+Manicure e Pedicure • Espaço Santana
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ESTATÍSTICAS -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>+500</h2>
+<span>Atendimentos Realizados</span>
+</div>
+
+<div class="stat-card">
+<h2>5★</h2>
+<span>Excelência no Atendimento</span>
+</div>
+
+<div class="stat-card">
+<h2>22 </h2>
+<span>Anos de Experiência</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+SERVIÇOS
+========================= -->
+
+<section class="services" id="servicos">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Nossos Serviços</span>
+
+<h2>
+Cuidado, beleza e
+sofisticação em cada detalhe
+</h2>
+
+<p>
+Atendimentos realizados com atenção, qualidade e carinho,
+para que você tenha uma experiência única.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-hand-sparkles"></i>
+</div>
+
+<h3>Manicure</h3>
+
+<p>
+Cutilagem, esmaltação e acabamento impecável para deixar
+suas unhas lindas e bem cuidadas.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-spa"></i>
+</div>
+
+<h3>Pedicure</h3>
+
+<p>
+Tratamento completo para os pés com conforto,
+bem-estar e acabamento profissional.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-gem"></i>
+</div>
+
+<h3>Esmaltação</h3>
+
+<p>
+Cores modernas, brilho duradouro e acabamento elegante
+para qualquer ocasião.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+GALERIA
+========================= -->
+
+<section class="gallery" id="galeria">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Galeria</span>
+
+<h2>
+Alguns dos nossos trabalhos
+</h2>
+
+<p>
+Cada atendimento é realizado com dedicação,
+atenção aos detalhes e muito carinho.
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="unha1.jpg" alt="">
+<div class="gallery-overlay">
+<span>Patricia Nails</span>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="unha2.jpg" alt="">
+<div class="gallery-overlay">
+<span>Patricia Nails</span>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="unha3.jpg" alt="">
+<div class="gallery-overlay">
+<span>Patricia Nails</span>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="unha4.jpg" alt="">
+<div class="gallery-overlay">
+<span>Patricia Nails</span>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="unha5.jpg" alt="">
+<div class="gallery-overlay">
+<span>Patricia Nails</span>
+</div>
+</div>
+
+<div class="gallery-item">
+<img src="unha6.jpg" alt="">
+<div class="gallery-overlay">
+<span>Patricia Nails</span>
+</div>
+</div>  
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+CTA PREMIUM
+========================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<span>✨ Atendimento Exclusivo</span>
+
+<h2>
+Reserve seu horário
+e valorize ainda mais sua beleza
+</h2>
+
+<p>
+Entre em contato agora mesmo e agende seu atendimento
+com conforto, qualidade e atenção aos detalhes.
+</p>
+
+<a href="https://wa.me/5511946250613" class="btn-primary">
+
+<i class="fab fa-whatsapp"></i>
+
+Agendar Horário
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+CONTATO
+========================= -->
+
+<section class="contact" id="contato">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Contato</span>
+
+<h2>
+Agende seu horário
+</h2>
+
+<p>
+Será um prazer cuidar da sua beleza.
+Entre em contato e reserve seu atendimento.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<!-- INFORMAÇÕES -->
+
+<div class="contact-info">
+
+<div class="contact-card">
+
+<i class="fab fa-whatsapp"></i>
+
+<div>
+
+<h3>WhatsApp</h3>
+
+<p>(11) 94625-0613</p>
+
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-location-dot"></i>
+
+<div>
+
+<h3>Endereço</h3>
+
+<p>
+Rua Saguairu, 799<br>
+Espaço Santana - em parceria com <br>
+Espaço Yugen
+</p>
+
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-clock"></i>
+
+<div>
+
+<h3>Horários</h3>
+
+<p>
+Segunda-feira<br>
+Quarta-feira<br>
+Quinta-feira<br>
+Sexta-feira<br>
+Sábado
+</p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/5511946250613"
+class="contact-button">
+
+<i class="fab fa-whatsapp"></i>
+
+Agendar Atendimento
+
+</a>
+
+</div>
+
+<!-- MAPA -->
+
+<div class="map-box">
+
+<iframe
+src="https://www.google.com/maps?q=Rua%20Saguairu%20799&output=embed"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-social-title">
+
+<h3>Conecte-se com Patricia Nails</h3>
+
+<p>
+Acompanhe nossos trabalhos e agende seu horário.
+</p>
+
+</div>
+
+<div class="social-list">
+
+<!-- WHATSAPP -->
+
+<div class="social-card whatsapp">
+
+<div class="social-left">
+
+<i class="fab fa-whatsapp"></i>
+
+<div class="social-info">
+
+<h4>WhatsApp</h4>
+
+<p>Agendamento rápido e atendimento direto.</p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/5511946250613">
+Conversar
+</a>
+
+</div>
+
+<!-- INSTAGRAM -->
+
+<div class="social-card instagram">
+
+<div class="social-left">
+
+<i class="fab fa-instagram"></i>
+
+<div class="social-info">
+
+<h4>Instagram</h4>
+
+<p>Acompanhe nossos trabalhos e novidades.</p>
+
+</div>
+
+</div>
+
+<a href="https://instagram.com/espacosantananails">
+Acessar
+</a>
+
+</div>
+
+<!-- LOCALIZAÇÃO -->
+
+<div class="social-card location">
+
+<div class="social-left">
+
+<i class="fas fa-location-dot"></i>
+
+<div class="social-info">
+
+<h4>Localização</h4>
+
+<p>Rua Saguairu, 799 - Espaço Santana</p>
+
+</div>
+
+</div>
+
+<a href="https://www.bing.com/maps/search?mepi=57%7E%7EEmbedded%7ELargeMapLink&ty=18&v=2&sV=1&qpvt=Rua+saguairu+799&FORM=MIRE&q=Rua+S%C3%A1guairu%2C+799%2C+Casa+Verde%2C+S%C3%A3o+Paulo+-+SP%2C+02514-000&ppois=-23.5119598_-46.6570966_Rua+S%C3%A1guairu%2C+799%2C+Casa+Verde%2C+S%C3%A3o+Paulo+-+SP%2C+02514-000_%7E&cp=-23.511960%7E-46.657097&lvl=11&style=r">
+Ver Local
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Patricia Nails - Todos os direitos reservados.
+</p>
+
+<p class="footer-signature">
+
+Site desenvolvido por
+
+<span>
+
+<a href="#">
+Nexa Agency
+</a>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- =========================
+JAVASCRIPT
+========================= -->
+
+<script>
+
+const menuToggle =
+document.querySelector('.menu-toggle');
+
+const navMenu =
+document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click',()=>{
+
+navMenu.classList.toggle('active');
+
+if(navMenu.classList.contains('active')){
+menuToggle.innerHTML =
+'<i class="fas fa-xmark"></i>';
+}else{
+menuToggle.innerHTML =
+'<i class="fas fa-bars"></i>';
+}
+
+});
+
+document.querySelectorAll('.nav-menu a')
+.forEach(link=>{
+
+link.addEventListener('click',()=>{
+
+navMenu.classList.remove('active');
+
+menuToggle.innerHTML =
+'<i class="fas fa-bars"></i>';
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
